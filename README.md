@@ -2,47 +2,37 @@
 Real-time detection model that identifies 5 common Sign Language phrases: 'Hello', 'Yes', 'No', 'I love you', 'Thank you' through live camera.
 
 ## Table of Contents
-[Features](#Features)  
 [Technologies](#Technologies)  
 [Setup](#Setup)  
-[Sources](#Sources)  
-[Team](#Team)  
 
-<a name="Features"/>
-
-## Features
-
-
+<a name="Technologies"/>
 
 ## Technologies
 - [Tensorflow Object Detection API](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html)
-- [LabelImg] (https://github.com/HumanSignal/labelImg)
+- [LabelImg](https://github.com/HumanSignal/labelImg)
 
 <a name="Setup"/>
 
 ## Setup
 
-To run this project, clone the repository and install dependencies locally:
+To run this project, clone the repository locally.
 
+Open Jupyter Notebook and run the code cells in:
 ```
-$ cd .\myAngularProj\
-$ npm install --force
-$ npm i ngx-google-places-autocomplete --force
-```
-
-In the same terminal with the open `myAngularProj` directory, run the frontend:
-
-```
-$ ng s
+ Image Data Collection.ipynb
 ```
 
-Open a second, seperate terminal which should open into the directory and run the backend:
+That should automatically prompt your webcam to collect images for the dataset.
+
+Use [LabelImg](https://github.com/HumanSignal/labelImg) to manually label and gather data from our images based on the 5 phrases: 'Hello', 'Yes', 'No', 'I love you', 'Thank you'.
+
+Once the dataset is labeled and organized correctly, run the code cells in:
 
 ```
-$ go run main.go
+Tutorial.ipynb
 ```
+This should clone the [Tensorflow Object Detection API](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html), which will be used to train our model
 
-Find the running project on `http://localhost:4200/`.
+Copy the code output after ***Step 6*** into the project directory, and that should train the model.
 
-
-## Sources
+Follow the rest of the steps, and the live camera will pop up to detect our 5 ASL phrases!
